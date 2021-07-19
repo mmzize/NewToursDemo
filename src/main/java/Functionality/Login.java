@@ -1,3 +1,5 @@
+package Functionality;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -6,7 +8,7 @@ public class Login {
 
 public static void main (String[] args) {
     //location of chrome driver
-    System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe");
+    System.setProperty("webdriver.chrome.driver", ".\\src\\main\\java\\Drivers\\chromedriver.exe");
     WebDriver driver = new ChromeDriver();
     //maximize the browser
     driver.manage().window().maximize();
@@ -26,7 +28,7 @@ public static void main (String[] args) {
     //clicking the Submit button
     driver.findElement(By.xpath("//input[@name='submit']")).click();
 
-    //We are checking if the Login Successfully element is Displayed
+    //We are checking if the Functionality.Login Successfully element is Displayed
     if (driver.findElement(By.xpath("//h3[contains(.,'Login Successfully')]")).isDisplayed()) {
         //if Element is Displayed we are saying our tests passed
         System.out.println("PASSED");
